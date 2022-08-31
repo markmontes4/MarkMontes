@@ -333,16 +333,18 @@
         <script>
             function sendEmail(){
                 Email.send({
-                    SecureToken: "16f6458d-214b-4720-ad30-e7d5b33cbc75",
-                    To : 'dev.mmontes@gmail.com',
-                    From : document.getElementById("email").value,
-                    Subject : "New Contact!",
-                    Body : "Name: " + document.getElementById("name").value +
-                        "<br> Phone Number: " + document.getElementById("phone").value +
-                        "<br> <br>" + document.getElementById("message").value
-            }).then(
-            message => alert(message)
-            );
+                            Host : "smtp.elasticemail.com",
+                            Username : "mark.montes44@gmail.com",
+                            Password : "CFE4B310D077D08A6907C104B99A7E774693",
+                            To : 'dev.mmontes@gmail.com',
+                            From : document.getElementById(email).value,
+                            Subject : "New Contact!",
+                            Body : "Name: " + document.getElementById("name").value +
+                            "<br> Phone Number: " + document.getElementById("phone").value +
+                            "<br> <br>" + document.getElementById("message").value
+                        }).then(
+                        message => alert(message)
+                );
             }
         </script>
     </body>
