@@ -337,7 +337,9 @@
                     To : 'mark-montes@hotmail.com',
                     From : document.getElementById("email").value,
                     Subject : "New Contact!",
-                    Body : "And this is the body"
+                    Body : "Name: " + document.getElementById("name").value +
+                        "<br> Phone Number: " + document.getElementById("phone").value +
+                        "<br> <br>" + document.getElementById("message").value
             }).then(
             message => alert(message)
             );
