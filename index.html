@@ -311,14 +311,12 @@
         <script>
             function sendEmail(){
                 Email.send({
-                            Host : "smtp.elasticemail.com",
-                            Username : "mark-montes@hotmail.com",
-                            Password : "58712450689BBDB07825D52120DB75FA3EDE",
-                            To : "mark-montes@hotmail.com",
-                            From : document.getElementById(email).value,
-                            Subject : "New Contact!",
-                            Body : "test"
-                        }).then(message => alert(message)
+                    SecureToken : "13d4da9a-2838-4bc6-95ab-f98527f3cd34",
+                    To : "mark-montes@hotmail.com",
+                    From : document.getElementById(email).value,
+                    Subject : "New Contact!",
+                    Body : "test"
+                }).then(message => alert(message)
                 );
             }
         </script>   
