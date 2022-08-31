@@ -134,7 +134,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" action="https://formsubmit.co/mark-montes@hotmail.com" method="POST">
+                        <form id="contactForm" onsubmit="sendEmail(); reset(); return false;">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -329,5 +329,19 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    SecureToken: "77ff4bb3-6711-43ab-8055-900de42e1f1c",
+                    To : 'mark-montes@hotmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : "New Contact!",
+                    Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+            }
+        </script>
     </body>
 </html>
