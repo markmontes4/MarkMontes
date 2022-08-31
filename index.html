@@ -335,7 +335,7 @@
                 Email.send({
                     SecureToken: "d2b454fc-4425-41a0-8716-f886779fe674",
                     To : 'dev.mmontes@gmail.com',
-                    From : document.getElementById("email"),
+                    From : document.getElementById("email").value,
                     Subject : "New Contact!",
                     Body : "Name: " + document.getElementById("name").value +
                         "<br> Phone Number: " + document.getElementById("phone").value +
