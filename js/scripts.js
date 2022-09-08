@@ -7,6 +7,20 @@
 // Scripts
 // 
 
+function sendEmail(){
+    Email.send({
+        SecureToken : "8d3b8410-4ca8-4ddc-b3fb-c413dcfae03d",
+        To : "mark-montes@hotmail.com",
+        From : "mark-montes@hotmail.com",
+        Subject : "New Contact! [" + document.getElementById("name").value + "]",
+        Body : "Name: " + document.getElementById("name").value + "<br>" +
+                "Phone: " + document.getElementById("phone").value + "<br>" +
+                "Email: " + document.getElementById("email").value + "<br> <br>" +
+                document.getElementById("message").value
+    }).then(message => alert(message)
+    );
+}
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
